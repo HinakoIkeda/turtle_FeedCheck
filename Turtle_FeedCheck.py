@@ -1,5 +1,3 @@
-##LINEtoken_kojin:4bgpTkohx371Aryz2hNBL6kKaz01rV0w0vz0zkfgs00
-#LINEtoken_kazoku:S75GV3nMEeU4MM9z1hTOT71MXa08Laej2J7n2qwJV37
 import requests
 import time
 import threading 
@@ -12,11 +10,11 @@ colors = ['b','r','y','g','c','k','m','#e41a1c']
 plot_num = 10 #plotされるセンサ値の数
 plot_idx = 0
 
-img_happy = '/home/pi/exp0603/ExpDir/imagefile/happy. JPG'
-img_hungry = '/home/pi/exp0603/ExpDir/imagefile/hungry.JPG'
+img_happy = './happy.PNG'
+img_hungry = './hungry.PNG'
 
 def send_message(msg, pic) :
-    token = 'S75GV3nMEeU4MM9z1hIOT7IMXa88Laej237n2qwJV3Z'
+    token = ENV.LINETOKEN_KAZOKU
     url = 'https://notify-api.line.me/api/notify'
     headers = {'Authorization': 'Bearer ' + token}
 
